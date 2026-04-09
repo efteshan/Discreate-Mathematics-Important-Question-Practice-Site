@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>BIC1114 – Python Lists, Tuples & Dictionaries</title>
+<title>Introduction to Programming - Final Exam Study Guide</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -185,6 +185,20 @@ body {
   letter-spacing: -0.01em;
 }
 .sec-sub { font-size: 12px; color: var(--muted); margin-top: 1px; }
+
+/* PROGRESS BAR */
+.progress-bar {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  width: 100%;
+}
 
 /* QUESTION CARD */
 .q-card {
@@ -536,11 +550,11 @@ code {
 <!-- NAV -->
 <div class="nav-wrap">
   <div class="nav-inner">
-    <button class="nav-btn n-list active" onclick="showSec('list',this)">📋 Lists</button>
-    <button class="nav-btn n-tuple" onclick="showSec('tuple',this)">📌 Tuples</button>
-    <button class="nav-btn n-dict" onclick="showSec('dict',this)">📖 Dictionaries</button>
-    <button class="nav-btn n-fn" onclick="showSec('fn',this)">⚙️ Functions</button>
-    <button class="nav-btn n-proj" onclick="showSec('proj',this)">🚀 Mini Project</button>
+    <button class="nav-btn n-list active" onclick="showSec('list',this)">🔴 Lists</button>
+    <button class="nav-btn n-tuple" onclick="showSec('tuple',this)">🟢 Tuples</button>
+    <button class="nav-btn n-dict" onclick="showSec('dict',this)">🟣 Dictionaries</button>
+    <button class="nav-btn n-fn" onclick="showSec('fn',this)">🟠 Functions</button>
+    <button class="nav-btn n-proj" onclick="showSec('proj',this)">🔵 Mini Project</button>
   </div>
 </div>
 
@@ -550,12 +564,13 @@ code {
 <!-- ═══════════════════ LIST SECTION ═══════════════════ -->
 <div class="section active" id="sec-list">
   <div class="sec-header">
-    <div class="sec-icon ic-list">📋</div>
+    <div class="sec-icon ic-list">🔴</div>
     <div>
       <div class="sec-title" style="color:var(--accent-list)">Part A: Lists</div>
       <div class="sec-sub">Mutable, ordered collection · Problems 1–5</div>
     </div>
   </div>
+  <div class="progress-bar"><div class="progress-fill" style="background:linear-gradient(90deg, #e05a2b, #f7a84a)"></div></div>
 
   <!-- CONCEPT CARD -->
   <div class="q-card" id="lc">
@@ -864,12 +879,13 @@ Without duplicates: [1, 2, 3, 4, 5]</div>
 <!-- ═══════════════════ TUPLE SECTION ═══════════════════ -->
 <div class="section" id="sec-tuple">
   <div class="sec-header">
-    <div class="sec-icon ic-tuple">📌</div>
+    <div class="sec-icon ic-tuple">🟢</div>
     <div>
       <div class="sec-title" style="color:var(--accent-tuple)">Part B: Tuples</div>
       <div class="sec-sub">Immutable, ordered records · Problems 6–8</div>
     </div>
   </div>
+  <div class="progress-bar"><div class="progress-fill" style="background:linear-gradient(90deg, #2e9e6b, #6af7c0)"></div></div>
 
   <!-- CONCEPT -->
   <div class="q-card" id="tc">
@@ -1051,12 +1067,13 @@ Last two cities: ('Khulna', 'Sylhet')</div>
 <!-- ═══════════════════ DICTIONARY SECTION ═══════════════════ -->
 <div class="section" id="sec-dict">
   <div class="sec-header">
-    <div class="sec-icon ic-dict">📖</div>
+    <div class="sec-icon ic-dict">🟣</div>
     <div>
       <div class="sec-title" style="color:var(--accent-dict)">Part C: Dictionaries</div>
       <div class="sec-sub">Key-value mapping · Problems 9–13</div>
     </div>
   </div>
+  <div class="progress-bar"><div class="progress-fill" style="background:linear-gradient(90deg, #8b5cf6, #c084fc)"></div></div>
 
   <!-- CONCEPT -->
   <div class="q-card" id="dc">
@@ -1350,12 +1367,13 @@ Eggs - OK</div>
 <!-- ═══════════════════ FUNCTIONS SECTION ═══════════════════ -->
 <div class="section" id="sec-fn">
   <div class="sec-header">
-    <div class="sec-icon ic-fn">⚙️</div>
+    <div class="sec-icon ic-fn">🟠</div>
     <div>
       <div class="sec-title" style="color:var(--accent-fn)">Functions with Data Structures</div>
       <div class="sec-sub">Lab Handout Tasks: passing lists, tuples, dicts to functions</div>
     </div>
   </div>
+  <div class="progress-bar"><div class="progress-fill" style="background:linear-gradient(90deg, #d97706, #fbbf24)"></div></div>
 
   <!-- CONCEPT -->
   <div class="q-card" id="fnc">
@@ -1596,12 +1614,13 @@ Grade : A</div>
 <!-- ═══════════════════ MINI PROJECT ═══════════════════ -->
 <div class="section" id="sec-proj">
   <div class="sec-header">
-    <div class="sec-icon ic-proj">🚀</div>
+    <div class="sec-icon ic-proj">🔵</div>
     <div>
       <div class="sec-title" style="color:var(--accent-proj)">Mini Project: Student Manager</div>
       <div class="sec-sub">Integrated system using List + Tuple + Dictionary + Functions</div>
     </div>
   </div>
+  <div class="progress-bar"><div class="progress-fill" style="background:linear-gradient(90deg, #0369a1, #38bdf8)"></div></div>
 
   <!-- Integrated system -->
   <div class="q-card" id="proj1">

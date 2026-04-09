@@ -6,9 +6,10 @@ const SECTIONS = [
   // ── SET THEORY ──
   {
     id: 'set', cls: 's-set',
+    emoji: '🟣', iconCls: 'ic-set', titleColor: 'var(--accent1)',
     title: 'Set Theory',
     sub: 'Questions 1 to 10 · Union, Intersection, Complement, Power Set',
-    gradient: '',
+    gradient: 'linear-gradient(90deg, var(--accent1), var(--accent3))',
     questions: [
       {
         id: 'q1',
@@ -194,6 +195,7 @@ const SECTIONS = [
   // ── PROBABILITY ──
   {
     id: 'prob', cls: 's-prob',
+    emoji: '🔴', iconCls: 'ic-prob', titleColor: 'var(--accent2)',
     title: 'Probability',
     sub: 'Questions 11 to 20 · Classical Probability, Coins, Dice, Cards',
     gradient: 'linear-gradient(90deg, var(--accent2), var(--accent4))',
@@ -367,6 +369,7 @@ const SECTIONS = [
   // ── MATRIX ──
   {
     id: 'matrix', cls: 's-matrix',
+    emoji: '🔵', iconCls: 'ic-matrix', titleColor: 'var(--accent5)',
     title: 'Matrix',
     sub: 'Questions 21 to 30 · Transpose, Determinant, Multiplication, Identity',
     gradient: 'linear-gradient(90deg, var(--accent5), var(--accent1))',
@@ -544,6 +547,7 @@ const SECTIONS = [
   // ── ALGORITHMS ──
   {
     id: 'algo', cls: 's-algo',
+    emoji: '🟢', iconCls: 'ic-algo', titleColor: 'var(--accent3)',
     title: 'Algorithms',
     sub: 'Questions 31 to 40 · Bubble Sort and Binary Search',
     gradient: 'linear-gradient(90deg, var(--accent3), var(--accent5))',
@@ -720,6 +724,7 @@ const SECTIONS = [
   // ── RECURRENCE ──
   {
     id: 'rec', cls: 's-rec',
+    emoji: '🟠', iconCls: 'ic-rec', titleColor: 'var(--accent4)',
     title: 'Recurrence and Sequences',
     sub: 'Questions 41 to 45 · Recurrence Relations, Fibonacci',
     gradient: 'linear-gradient(90deg, var(--accent4), var(--accent2))',
@@ -824,6 +829,7 @@ const SECTIONS = [
   // ── COMBINATORICS ──
   {
     id: 'comb', cls: 's-comb',
+    emoji: '🟣', iconCls: 'ic-comb', titleColor: '#d06af7',
     title: 'Combinatorics',
     sub: 'Questions 46 to 50 · Combinations, Permutations, Pigeonhole',
     gradient: 'linear-gradient(90deg, #d06af7, var(--accent1))',
@@ -971,7 +977,7 @@ function renderAll() {
     let qs = '';
     sec.questions.forEach(q => { qs += renderQuestion(q); });
     const gradientStyle = sec.gradient ? ` background: ${sec.gradient};` : '';
-    main.innerHTML += `<div class="section ${sec.cls}${i === 0 ? ' active' : ''}" id="sec-${sec.id}"><div class="section-header"><div><div class="section-title">${sec.title}</div><div class="section-sub">${sec.sub}</div></div></div><div class="progress-bar"><div class="progress-fill" style="width:100%;${gradientStyle}"></div></div>${qs}</div>`;
+    main.innerHTML += `<div class="section ${sec.cls}${i === 0 ? ' active' : ''}" id="sec-${sec.id}"><div class="section-header"><div class="sec-icon ${sec.iconCls}">${sec.emoji}</div><div><div class="section-title" style="color:${sec.titleColor}">${sec.title}</div><div class="section-sub">${sec.sub}</div></div></div><div class="progress-bar"><div class="progress-fill" style="width:100%;${gradientStyle}"></div></div>${qs}</div>`;
   });
 }
 
